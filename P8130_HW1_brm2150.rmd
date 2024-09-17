@@ -45,7 +45,33 @@ plot_df = tibble(
   dep_scr = c(45, 39, 25, 47, 49, 5, 70, 99, 74, 37, 99, 35, 8, 59)
 )
 
-ggplot(plot_df, aes(x = ppl, y = dep_scr)) +
-  geom_boxplot()
+ggplot(plot_df, aes(y = dep_scr)) +
+  geom_boxplot()+
+  labs(
+    title = "BoxPlot of Depressions Scores from Bike Crash",
+    y = "Depression Score"
+  )
 
 ```
+The Distribution of the data is right-skewed because the mean is greater than the median. The mode is 99.
+
+# I DONT KNOW HOW TO FIND THE MODE YET
+
+```{r}
+bike_crash = c(45, 39, 25, 47, 49, 5, 70, 99, 74, 37, 99, 35, 8, 59)
+car_crash = c(67, 50, 85, 43, 64, 35, 47, 97, 58, 58, 10, 56, 50)
+
+
+ggplot() +
+  geom_boxplot(
+    aes(y = bike_crash, y = car_crash)
+  ) +
+  geom_boxplot(
+    aes(y = car_crash)
+  ) +  
+  labs(
+    title = "BoxPlot of Depressions Scores from Bike Crash",
+    y = "Depression Score"
+  )
+```
+
