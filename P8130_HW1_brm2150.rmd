@@ -8,34 +8,44 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
 ```
 
 ## Problem 1
 
-Classify the following variables as qualitative (binary, nominal, or ordinal) or quantitative (discrete or continous).
+Classify the following variables as qualitative (binary, nominal, or ordinal) or quantitative (discrete or continuous).
 
-1. Homework feedback, labeled as “poor”, “fair”, “good”, “very good”
-  Qualitative - ordinal
-2. Homework feedback, labeled as "fail", "pass"
-  Qualitative - binary
-3. Country of birth
-  Qualitative - nominal
-4. The quantity of grapes (in lbs) to make 3 liters of wine
-  Quantitative - continuous
-5. Number of TAs in the P8130 course
-  Quantitative - discrete  
+1.  Homework feedback, labeled as “poor”, “fair”, “good”, “very good”
+    1.  **Qualitative - ordinal**
+2.  Homework feedback, labeled as "fail", "pass"
+    1.  **Qualitative - binary**
+3.  Country of birth
+    1.  **Qualitative - nominal**
+4.  The quantity of grapes (in lbs) to make 3 liters of wine
+    1.  **Quantitative - continuous**
+5.  Number of TAs in the P8130 course
+    1.  **Quantitative - discrete**
 
 ## Problem 2
 
 ```{r creating the dataframe}
 dep_scr = c(45, 39, 25, 47, 49, 5, 70, 99, 74, 37, 99, 35, 8, 59)
 
+summary(dep_scr)
+
 
 ```
 
-
+1. The mean is `r mean(dep_scr)`, the meadian is`r median(dep_scr)`, the range is `r range(dep_scr)`, and the standard deviation is `r sd(dep_scr)`.
+2. 
 ```{r}
+plot_df = tibble(
+  ppl = c(1:14),
+  dep_scr = c(45, 39, 25, 47, 49, 5, 70, 99, 74, 37, 99, 35, 8, 59)
+)
+
+ggplot(plot_df, aes(x = ppl, y = dep_scr)) +
+  geom_boxplot()
 
 ```
-
-
