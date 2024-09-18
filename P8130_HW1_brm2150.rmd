@@ -61,14 +61,15 @@ The Distribution of the data is right-skewed because the mean is greater than th
 bike_crash = c(45, 39, 25, 47, 49, 5, 70, 99, 74, 37, 99, 35, 8, 59)
 car_crash = c(67, 50, 85, 43, 64, 35, 47, 97, 58, 58, 10, 56, 50)
 
+plot_df = tibble(
+  dep_scr = c(bike_crash,car_crash),
+  crash_type = c(rep("bike", 14), rep("car", 13))
+)
 
-ggplot() +
+ggplot(plot_df) +
   geom_boxplot(
-    aes(y = bike_crash, y = car_crash)
+    aes(x = crash_type, y = dep_scr, fill = crash_type)
   ) +
-  geom_boxplot(
-    aes(y = car_crash)
-  ) +  
   labs(
     title = "BoxPlot of Depressions Scores from Bike Crash",
     y = "Depression Score"
