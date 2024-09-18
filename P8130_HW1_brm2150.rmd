@@ -37,8 +37,9 @@ summary(dep_scr)
 
 ```
 
-1. The mean is `r mean(dep_scr)`, the meadian is`r median(dep_scr)`, the range is `r range(dep_scr)`, and the standard deviation is `r sd(dep_scr)`.
-2. 
+1.  The mean is `r mean(dep_scr)`, the meadian is`r median(dep_scr)`, the range is `r range(dep_scr)`, and the standard deviation is `r sd(dep_scr)`.
+2.  
+
 ```{r}
 plot_df = tibble(
   ppl = c(1:14),
@@ -53,6 +54,7 @@ ggplot(plot_df, aes(y = dep_scr)) +
   )
 
 ```
+
 The Distribution of the data is right-skewed because the mean is greater than the median. The mode is 99.
 
 # I DONT KNOW HOW TO FIND THE MODE YET
@@ -78,3 +80,12 @@ ggplot(plot_df) +
 
 The bike crash data is right-skewed becauase the median is lower than the mean and the car crash data is left skewed slightly because the median is a little higher than the average
 
+## Problem 3
+
+1.   A = {2,4,6,8,10,12}
+    1.  The probability of A is 6/12 or 1/2.
+2.  B = {10}
+    1.  the probability of 10 is 1/12.
+3.   Compute P (B U A)
+
+## Problem 4
