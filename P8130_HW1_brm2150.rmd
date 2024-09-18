@@ -89,3 +89,11 @@ The bike crash data is right-skewed becauase the median is lower than the mean a
 3.   Compute P (B U A)
 
 ## Problem 4
+
+P (women over 75 yrs have dementia) = 0.05
+
+P (women over 75 with dementia have positive CT scan) = 0.80
+
+P (women over 75 without dementia have positive CT scan) = 0.10
+
+[Find the probability that a woman over 75 with a positive CT scan has dementia.]{.underline}
