@@ -2,8 +2,7 @@
 title: "p8130_HW1_brm2150"
 author: "Brooklynn McNeil"
 date: "2024-09-17"
-output:
-  pdf_document: default
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -12,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
-## Problem 1
+# Problem 1
 
 Classify the following variables as qualitative (binary, nominal, or ordinal) or quantitative (discrete or continuous).
 
@@ -27,9 +26,9 @@ Classify the following variables as qualitative (binary, nominal, or ordinal) or
 5.  Number of TAs in the P8130 course
     1.  **Quantitative - discrete**
 
-## Problem 2
+# Problem 2
 
-```{r creating the dataframe}
+```{r creating the dataframe, echo=FALSE}
 dep_scr = c(45, 39, 25, 47, 49, 5, 70, 99, 74, 37, 99, 35, 8, 59)
 
 summary(dep_scr)
@@ -37,7 +36,7 @@ summary(dep_scr)
 
 ```
 
-1.  The mean is `r mean(dep_scr)`, the meadian is`r median(dep_scr)`, the range is `r range(dep_scr)`, and the standard deviation is `r sd(dep_scr)`.
+1.  The mean is `r mean(dep_scr)`, the median is `r median(dep_scr)`, the range is `r range(dep_scr)`, and the standard deviation is `r sd(dep_scr)`.
 2.  
 
 ```{r}
@@ -80,7 +79,7 @@ ggplot(plot_df) +
 
 The bike crash data is right-skewed becauase the median is lower than the mean and the car crash data is left skewed slightly because the median is a little higher than the average
 
-## Problem 3
+# Problem 3
 
 1.   A = {2,4,6,8,10,12}
     1.  The probability of A is 6/12 or 1/2.
@@ -88,7 +87,7 @@ The bike crash data is right-skewed becauase the median is lower than the mean a
     1.  the probability of 10 is 1/12.
 3.   Compute P (B U A)
 
-## Problem 4
+# Problem 4
 
 P (women over 75 yrs have dementia) = 0.05
 
