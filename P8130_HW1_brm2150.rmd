@@ -71,8 +71,10 @@ ggplot(plot_df) +
     aes(x = crash_type, y = dep_scr, fill = crash_type)
   ) +
   labs(
-    title = "BoxPlot of Depressions Scores from Bike Crash",
+    title = "BoxPlot of Depressions Scores",
     y = "Depression Score"
   )
 ```
+
+The bike crash data is right-skewed becauase the median is lower than the mean and the car crash data is left skewed slightly because the median is a little higher than the average
 
